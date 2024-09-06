@@ -54,7 +54,7 @@ header p {
     font-style: italic;
 }
 
-.bio, .details {
+.bio, .details, .devices {
     margin-bottom: 20px;
     text-align: center; /* Центрирование текста в bio и details */
 }
