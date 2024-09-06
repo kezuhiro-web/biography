@@ -9,6 +9,7 @@ body {
     font-family: 'Google Sans', sans-serif;
     background-image: url('background.gif');
     background-position: center;
+    background-size: cover;
     color: #E0E0E0; /* Светлый текст по умолчанию */
     line-height: 1.6;
     display: flex;
