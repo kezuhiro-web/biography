@@ -7,26 +7,30 @@
 
 body {
     font-family: 'Google Sans', sans-serif;
-    background-color: #121212;
-    color: #E0E0E0;
+    background-color: #121212; /* Темный фон */
+    color: #E0E0E0; /* Светлый текст */
     line-height: 1.6;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
     margin: 0;
-    text-align: center;
+    text-align: center; /* Центрирование текста */
 }
 
 .container {
     max-width: 800px;
     padding: 20px;
-    background-color: #1E1E1E;
+    background-color: #1E1E1E; /* Темный контейнер */
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 /* Заголовки */
+h1, h2 {
+    color: #FFFFFF; /* Белый цвет заголовков */
+}
+
 h1 {
     font-size: 2.5rem;
     margin-bottom: 10px;
@@ -40,7 +44,7 @@ h2 {
 
 /* Блоки */
 header p {
-    color: #9E9E9E;
+    color: #B0B0B0; /* Серый цвет для подписи */
     font-style: italic;
 }
 
@@ -55,16 +59,17 @@ ul {
 
 ul li {
     margin-bottom: 10px;
+    color: #E0E0E0; /* Светлый текст для деталей */
 }
 
 footer {
-    color: #9E9E9E;
+    color: #B0B0B0; /* Серый цвет для футера */
     font-size: 0.9rem;
 }
 
 /* Ссылки */
 a {
-    color: #BB86FC;
+    color: #BB86FC; /* Цвет ссылок */
     text-decoration: none;
 }
 
