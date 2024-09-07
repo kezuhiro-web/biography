@@ -19,8 +19,12 @@ body {
 }
 
 .container {
+    margin-top: 50px;
     height: 50%;
     width: 80%;
+    nax-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
     padding: 20px;
     background-color: #1E1E1E; /* Темный фон контейнера */
     border-radius: 30px;
