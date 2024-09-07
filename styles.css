@@ -30,6 +30,7 @@ body {
     border-radius: 30px;
     box-shadow: 0 0 10px rgba(30, 30, 30, 0.3);
     text-align: center; /* Центрирование текста внутри контейнера */
+    bottom: 50px;
     margin-bottom: 50px;
 }
 
@@ -91,6 +92,7 @@ a:hover {
     bottom: 50px;
     text-align: center;
     padding: 10px;
+    margin-bottom: 50px;
     transition: transform 0.3s ease;
 }
 
