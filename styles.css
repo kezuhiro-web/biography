@@ -71,12 +71,6 @@ ul li {
     color: #E0E0E0; /* Светлый текст для деталей */
 }
 
-footer {
-    color: #B0B0B0; /* Серый цвет для футера */
-    font-size: 0.9rem;
-    text-align: center; /* Центрирование текста в footer */
-}
-
 /* Ссылки */
 a {
     color: #BB86FC; /* Цвет ссылок */
@@ -85,4 +79,11 @@ a {
 
 a:hover {
     text-decoration: underline;
+}
+
+.copyright {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
 }
