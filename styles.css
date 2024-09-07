@@ -13,13 +13,13 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 50%;
     margin: 0;
     text-align: center; /* Центрирование текста на уровне body */
 }
 
 .container {
-    max-width: 800px;
+    width: 50%;
     padding: 20px;
     background-color: #1E1E1E; /* Темный фон контейнера */
     border-radius: 30px;
