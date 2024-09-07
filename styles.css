@@ -87,10 +87,8 @@ a:hover {
 }
 
 .footer {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
+    position: bottom;
+    bottom: 20px;
     text-align: center;
     padding: 10px;
     transition: transform 0.3s ease;
