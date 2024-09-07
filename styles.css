@@ -7,7 +7,7 @@
 
 body {
     font-family: 'Google Sans', sans-serif;
-    background: linear-gradient(to bottom, #3d9912, #242424);
+    background: linear-gradient(to bottom, darkgreen, black);
     color: #E0E0E0; /* Светлый текст по умолчанию */
     line-height: 1.6;
     display: flex;
@@ -79,7 +79,7 @@ ul li {
 
 /* Ссылки */
 a {
-    color: #3d9912; /* Цвет ссылок */
+    color: #006400; /* Цвет ссылок */
     text-decoration: none;
 }
 
