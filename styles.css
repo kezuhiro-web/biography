@@ -20,7 +20,7 @@ body {
 
 .container {
     height: 50%;
-    width: 50%;
+    width: 80%;
     padding: 20px;
     background-color: #1E1E1E; /* Темный фон контейнера */
     border-radius: 30px;
