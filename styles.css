@@ -30,7 +30,7 @@ body {
     border-radius: 30px;
     box-shadow: 0 0 10px rgba(30, 30, 30, 0.3);
     text-align: center; /* Центрирование текста внутри контейнера */
-    bottom: 70px;
+    margin-bottom: 50px;
 }
 
 /* Заголовки */
