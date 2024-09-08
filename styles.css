@@ -8,13 +8,12 @@ body {
     font-family: 'Google Sans', sans-serif;
     background: linear-gradient(to bottom, darkgreen, black);
     background-size: cover;
-    background-position: center;
     color: #E0E0E0;
     line-height: 1.6;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 50%;
+    height: 100%;
     margin: 0;
     text-align: center;
 }
