@@ -58,7 +58,7 @@ header p {
     font-style: italic;
 }
 
-.bio, .details, .devices {
+.nicknames, .bio, .details, .devices {
     margin-bottom: 20px;
     text-align: center;
 }
