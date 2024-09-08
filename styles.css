@@ -6,7 +6,7 @@
 
 body {
     font-family: 'Google Sans', sans-serif;
-    background-color: green;
+    background-color: lightgreen;
     color: #E0E0E0;
     line-height: 1.6;
     display: flex;
@@ -25,7 +25,7 @@ body {
     margin-left: auto;
     margin-right: auto;
     padding: 20px;
-    background-color: #1E1E1E;
+    background-color: #141414;
     border-radius: 30px;
     box-shadow: 0 0 10px rgba(30, 30, 30, 0.3);
     text-align: center;
@@ -75,7 +75,7 @@ ul li {
 }
 
 a {
-    color: green;
+    color: lightgreen;
     text-decoration: none;
 }
 
