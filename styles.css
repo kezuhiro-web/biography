@@ -6,7 +6,7 @@
 
 body {
     font-family: 'Google Sans', sans-serif;
-    background-color: lightgreen;
+    background-color: lightblue;
     color: #E0E0E0;
     line-height: 1.6;
     display: flex;
@@ -75,7 +75,7 @@ ul li {
 }
 
 a {
-    color: lightgreen;
+    color: lightblue;
     text-decoration: none;
 }
 
