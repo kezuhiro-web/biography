@@ -18,10 +18,10 @@ body {
 }
 
 .container {
-    margin-top: 50px;
+    margin-top: auto;
     height: 50%;
     width: 80%;
-    nax-width: 1200px;
+    max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
     padding: 20px;
@@ -29,28 +29,28 @@ body {
     border-radius: 30px;
     box-shadow: 0 0 10px rgba(30, 30, 30, 0.3);
     text-align: center;
-    bottom: 50px;
-    margin-bottom: 50px;
+    margin-bottom: auto;
 }
 
 h1, h2 {
     color: #FFFFFF;
-    text-align: center;
+    text-align: left;
 }
 
 h1 {
     font-size: 2.5rem;
-    margin-bottom: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 h2 {
     font-size: 1.5rem;
     margin-top: 20px;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 
 header {
-    text-align: center;
+    text-align: left;
 }
 
 header p {
@@ -59,7 +59,7 @@ header p {
 }
 
 .nicknames, .bio, .details, .devices {
-    margin-top: 10px;
-    margin-bottom: 10px;
-    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: left;
 }
