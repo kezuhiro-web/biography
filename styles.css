@@ -59,6 +59,7 @@ header p {
 }
 
 .nicknames, .bio, .details, .devices {
+    margin-top: 10px;
     margin-bottom: 10px;
     text-align: center;
 }
