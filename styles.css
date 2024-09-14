@@ -62,36 +62,3 @@ header p {
     margin-bottom: 20px;
     text-align: center;
 }
-
-ul {
-    list-style: none;
-    padding: 0;
-    text-align: center;
-}
-
-ul li {
-    margin-bottom: 10px;
-    color: #E0E0E0;
-}
-
-a {
-    color: #64657A;
-    text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline;
-}
-
-.footer {
-    position: bottom;
-    bottom: 10px;
-    text-align: center;
-    padding: 10px;
-    margin-bottom: 10px;
-    transition: transform 0.3s ease;
-}
-
-.hidden-footer {
-    transform: translateY(100%);
-}
