@@ -1,47 +1,36 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Biography</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;700&display=swap">
+    <title>Iskander Bulyakov - Bio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.28.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.28.0/prism.min.js"></script>
+    <script src="script.js" defer></script>
 </head>
 <body>
     <header>
-        <h1><code>Iskander Bulyakov</code></h1>
+        <h1>Iskander Bulyakov</h1>
+        <button id="theme-toggle">Toggle Theme</button>
     </header>
 
-    <section class="nicknames">
-        <pre><code>nicknames = {
-    "nicks": "ShiningWhore, Kezuhiro",
-}</code></pre>
-    </section>
-
-    <section class="bio">
-        <pre><code>about_me = {
-    "text": "Learning Python",
-    "libraries": "aiogram",
-}</code></pre>
-    </section>
-
-    <section class="devices">
-        <pre><code>devices = {
-    "main": "Google Pixel 6",
-}</code></pre>
-    </section>
-
-    <section class="details">
-        <pre><code>details = {
-    "online": "10:00-21:00",
-    "timezone": "GMT +5 / Yekaterinburg",
-    "userbot": "Hikka",
-    "age": "14",
-    "github": "user:kezuhiro-web",
-    "telegram": "@shiningwhore",
-    "email": "alexeimullvadov@gmail.com",
-    "channel": "@swhore_info",
-}</code></pre>
+    <section>
+        <h2>Basic Information</h2>
+        <pre><code class="language-json">
+{
+    "Age": 14,
+    "Hobbies": ["Coding in Python"],
+    "Libraries": ["Aiogram", "Telethon"],
+    "Phone": "Google Pixel 6",
+    "Email": "alexeimullvadov@gmail.com",
+    "GitHub": "https://github.com/kezuhiro-web",
+    "Nicknames": ["ShiningWhore", "Kezuhiro"],
+    "Telegram": "@shiningwhore",
+    "Online": "10:00-21:00",
+    "Timezone": "GMT+5 (Yekaterinburg)"
+}
+        </code></pre>
     </section>
 </body>
 </html>
