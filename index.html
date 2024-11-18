@@ -19,7 +19,7 @@
 
         .container {
             background-color: #000000;
-            border-radius: 15%;
+            border-radius: 15px; /* Изменено на 15px для более плавных углов */
             padding: 30px;
             width: 90%;
             max-width: 500px;
@@ -30,7 +30,8 @@
 
         .banner {
             width: 100%;
-            border-radius: 15% 15% 0 0;
+            border-radius: 15px 15px 0 0; /* Корректировка углов для баннера */
+            object-fit: cover; /* Добавлено, чтобы изображение занимало весь контейнер */
         }
 
         h1 {
