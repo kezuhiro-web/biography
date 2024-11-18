@@ -19,8 +19,8 @@
 
         .container {
             background-color: #000000;
-            border-radius: 15px; /* Изменено на 15px для более плавных углов */
-            padding: 30px;
+            border-radius: 15px; /* Сглаженные углы для контейнера */
+            padding: 0; /* Убираем отступы для контейнера */
             width: 90%;
             max-width: 500px;
             margin: 20px;
@@ -30,13 +30,13 @@
 
         .banner {
             width: 100%;
-            border-radius: 15px 15px 0 0; /* Корректировка углов для баннера */
-            object-fit: cover; /* Добавлено, чтобы изображение занимало весь контейнер */
+            height: auto; /* Высота будет автоматической для сохранения пропорций */
+            border-radius: 0; /* Прямые углы для баннера */
         }
 
         h1 {
             font-size: 28px;
-            margin-bottom: 20px;
+            margin: 20px 0; /* Отступы сверху и снизу */
         }
 
         p {
@@ -63,8 +63,7 @@
 
         @media (min-width: 768px) {
             .container {
-                padding: 40px;
-                max-width: 600px;
+                padding: 20px; /* Умеренные отступы */
             }
 
             h1 {
