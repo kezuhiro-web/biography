@@ -3,31 +3,117 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Iskander Bulyakov - Bio</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.28.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.28.0/prism.min.js"></script>
+    <title>Iskander's Bio</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            background: #001a33;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            background-color: #000000;
+            border-radius: 15%;
+            padding: 30px;
+            width: 90%;
+            max-width: 500px;
+            margin: 20px;
+            text-align: center;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+        }
+
+        .banner {
+            width: 100%;
+            border-radius: 15% 15% 0 0;
+        }
+
+        h1 {
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        p {
+            margin: 10px 0;
+            font-size: 16px;
+            line-height: 1.5;
+        }
+
+        a {
+            color: #003366;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: #0055cc;
+        }
+
+        .bold {
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        @media (min-width: 768px) {
+            .container {
+                padding: 40px;
+                max-width: 600px;
+            }
+
+            h1 {
+                font-size: 32px;
+            }
+
+            p {
+                font-size: 18px;
+            }
+
+            .bold {
+                font-size: 20px;
+            }
+        }
+
+        @media (min-width: 1200px) {
+            .container {
+                max-width: 700px;
+            }
+
+            h1 {
+                font-size: 36px;
+            }
+
+            p {
+                font-size: 20px;
+            }
+
+            .bold {
+                font-size: 22px;
+            }
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <h1>Iskander Bulyakov</h1>
-    </header>
-
-    <section>
-        <pre><code class="language-json">
-{
-    "Nicknames": "Kezuhiro, ShiningWhore",
-    "Age": 14,
-    "Hobbies": "Coding in Python",
-    "Libraries": "Aiogram, Telethon",
-    "Phone": "Google Pixel 6",
-    "Email": "alexeimullvadov@gmail.com",
-    "GitHub": "user: kezuhiro-web",
-    "Telegram": "@htmIpage",
-    "Online": "10:00-21:00",
-    "Timezone": "GMT+5 (Yekaterinburg)"
-}
-        </code></pre>
-    </section>
+    <div class="container">
+        <img src="banner.png" alt="Banner" class="banner">
+        <h1>Iskander's Bio</h1>
+        <p><strong>Age:</strong> 14</p>
+        <p><strong>Birthday:</strong> April 24</p>
+        <p><strong>Devices:</strong> Google Pixel 6, Samsung R517 (dead battery), Raspberry Pi 3b Plus</p>
+        <p><strong>Languages:</strong> Russian, English (A2)</p>
+        <p><strong>Hobby:</strong> None</p>
+        <p><strong>Coding:</strong> Python</p>
+        <p><strong>Using:</strong> Hikka userbot</p>
+        <p><strong>Accounts:</strong> 
+            <a href="https://t.me/dummykezu" target="_blank">@dummykezu</a>, 
+            <a href="https://t.me/kezux" target="_blank">@kezux</a>
+        </p>
+        <p class="bold">Goodbye, traveler &lt;!&gt;</p>
+    </div>
 </body>
 </html>
