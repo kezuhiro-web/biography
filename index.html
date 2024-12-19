@@ -1,150 +1,125 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Iskander's Bio</title>
     <style>
-        * {
+        body {
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'San Francisco', sans-serif;
-            overflow: hidden;
-        }
-
-        .background {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.7);
-            backdrop-filter: blur(10px);
-            overflow: hidden;
-        }
-
-        .bio-container {
-            position: relative;
-            width: 80%;
-            max-width: 800px;
-            margin: 25% auto;
-            padding: 20px;
-            background: rgba(255, 255, 255, 0.1);
-            border: 2px solid rgba(255, 255, 255, 0.5);
-            border-radius: 10px;
-            backdrop-filter: blur(5px);
+            font-family: 'Arial', sans-serif;
+            background: #8DC373;
             color: white;
-            text-align: center;
-            z-index: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
         }
 
-        .bio-section {
-            margin-bottom: 20px;
-            padding: 15px;
-            border: 1px solid rgba(255, 255, 255, 0.3);
-            border-radius: 8px;
-            background: rgba(255, 255, 255, 0.05);
+        .container {
+            background-color: #7FB066;
+            border-radius: 15px;
+            padding: 0;
+            width: 90%;
+            max-width: 500px;
+            margin: 20px;
+            text-align: center;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+        }
+
+        .banner {
+            width: calc(100% - 40px);
+            height: auto;
+            border-radius: 15px;
+            margin: 20px;
         }
 
         h1 {
-            font-size: 2.5em;
-            margin-bottom: 20px;
+            font-size: 28px;
+            margin: 20px 0;
         }
 
         p {
             margin: 10px 0;
+            font-size: 16px;
+            line-height: 1.5;
         }
 
         a {
-            color: green;
+            color: #56784A;
             text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
         }
 
         a:hover {
-            color: darkgreen;
+            color: #D1E8B5;
         }
 
-        .green-stick {
-            position: absolute;
-            width: 10px;
-            height: 100px;
-            background: rgba(0, 255, 0, 0.7);
-            filter: blur(2px);
-            animation: float 5s infinite;
-        }
-
-        @keyframes float {
-            0% { transform: translateY(0); }
-            50% { transform: translateY(-20px); }
-            100% { transform: translateY(0); }
-        }
-
-        .goodbye {
+        .bold {
             font-weight: bold;
+            font-size: 18px;
+        }
+
+        @media (min-width: 768px) {
+            .container {
+                padding: 20px;
+            }
+
+            h1 {
+                font-size: 32px;
+            }
+
+            p {
+                font-size: 18px;
+            }
+
+            .bold {
+                font-size: 20px;
+            }
+        }
+
+        @media (min-width: 1200px) {
+            .container {
+                max-width: 700px;
+            }
+
+            h1 {
+                font-size: 36px;
+            }
+
+            p {
+                font-size: 20px;
+            }
+
+            .bold {
+                font-size: 22px;
+            }
         }
     </style>
 </head>
 <body>
-    <div class="background">
-        <div class="bio-container">
-            <h1>Iskander's Bio</h1>
-            <div class="bio-section">
-                <p><strong>Pseudonym:</strong> Kezuhiro (けずひろ), Aki (アキ)</p>
-                <p><strong>Age:</strong> 14 y.o. (April 24)</p>
-            </div>
-            <div class="bio-section">
-                <p><strong>Devices:</strong> Google Pixel 6, Samsung R517 (dead battery), Raspberry Pi 3B+</p>
-                <p><strong>Languages:</strong> Russian, English (A2)</p>
-            </div>
-            <div class="bio-section">
-                <p><strong>Hobby:</strong> Coding (maybe), Watching Anime</p>
-                <p><strong>Programming:</strong> Python, C++ (Arduino)</p>
-            </div>
-            <div class="bio-section">
-                <p><strong>Using:</strong> <a href="https://github.com/coddrago/Heroku" target="_blank">Heroku</a></p>
-                <p><strong>Accounts:</strong></p>
-                <p><a href="https://t.me/dummykezu" target="_blank">Main</a>, <a href="https://t.me/aki_user" target="_blank">Twink</a>, <a href="https://github.com/kezuhiro-web" target="_blank">GitHub</a></p>
-            </div>
-            <p class="goodbye">Goodbye, traveler &lt;!&gt;</p>
-        </div>
-        <script>
-            const background = document.querySelector('.background');
-
-            function createGreenSticks() {
-                const screenWidth = window.innerWidth;
-                const screenHeight = window.innerHeight;
-                const sticks = [];
-
-                for (let i = 0; i < 20; i++) {
-                    const stick = document.createElement('div stick.classList.add('green-stick');
-
-                    let left, top;
-                    let isOverlapping;
-
-                    do {
-                        left = Math.random() * (screenWidth - 80 * screenWidth / 100) + 10 * screenWidth / 100;
-                        top = Math.random() * (screenHeight - 200) + 100;
-                        isOverlapping = sticks.some(existingStick => {
-                            const existingLeft = existingStick.left;
-                            const existingTop = existingStick.top;
-                            const distance = Math.sqrt(Math.pow(existingLeft - left, 2) + Math.pow(existingTop - top, 2));
-                            return distance < 100 || distance > 150; // Минимальное и максимальное расстояние между палочками
-                        });
-                    } while (top < 100 || top > screenHeight - 100 || isOverlapping);
-
-                    stick.style.left = `${left}px`;
-                    stick.style.top = `${top}px`;
-                    background.appendChild(stick);
-                    sticks.push({ left, top });
-                }
-            }
-
-            createGreenSticks();
-        </script>
+    <div class="container">
+        <img src="banner.png" alt="Banner" class="banner">
+        <h1>Iskander's Bio</h1>
+        <p><strong>Pseudonym:</strong> Kezuhiro (けずひろ), Aki (アキ)</p>
+        <p><strong>Age:</strong> 14 y.o. (April 24)</p>
+        <p><strong>Devices:</strong> Google Pixel 6,</p>
+        <p>Samsung R517 (dead battery),</p>
+        <p>Raspberry Pi 3B+</p>
+        <p><strong>Languages:</strong> Russian, English (A2)</p>
+        <p><strong>Hobby:</strong> Coding (maybe), Watching Anime</p>
+        <p><strong>Programming:</strong> Python, C++(Arduino)</p>
+        <p><strong>Using:</strong> 
+            <a href="https://github.com/coddrago/Heroku" target="_blank">Heroku</a>
+        </p>
+        <p><strong>Accounts:</strong> 
+            <a href="https://t.me/dummykezu" target="_blank">Main</a>, 
+            <a href="https://t.me/aki_user" target="_blank">Twink</a>,
+            <a href="https://github.com/kezuhiro-web" target="_blank">GitHub</a>
+        </p>
+        <p class="bold">Goodbye, traveler &lt;!&gt;</p>
     </div>
 </body>
 </html>
