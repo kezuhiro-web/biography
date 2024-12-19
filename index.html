@@ -117,20 +117,29 @@
             function createGreenSticks() {
                 const screenWidth = window.innerWidth;
                 const screenHeight = window.innerHeight;
+                const sticks = [];
 
                 for (let i = 0; i < 20; i++) {
-                    const stick = document.createElement('div');
-                    stick.classList.add('green-stick');
+                    const stick = document.createElement('div stick.classList.add('green-stick');
 
                     let left, top;
+                    let isOverlapping;
+
                     do {
                         left = Math.random() * (screenWidth - 80 * screenWidth / 100) + 10 * screenWidth / 100;
-                        top = Math.random() * (screenHeight - 100) + 50; // Увеличено расстояние от верхней и нижней границ
-                    } while (top < 50 || top > screenHeight - 50); // Убедитесь, что палочки не находятся слишком близко к краям
+                        top = Math.random() * (screenHeight - 200) + 100;
+                        isOverlapping = sticks.some(existingStick => {
+                            const existingLeft = existingStick.left;
+                            const existingTop = existingStick.top;
+                            const distance = Math.sqrt(Math.pow(existingLeft - left, 2) + Math.pow(existingTop - top, 2));
+                            return distance < 100 || distance > 150; // Минимальное и максимальное расстояние между палочками
+                        });
+                    } while (top < 100 || top > screenHeight - 100 || isOverlapping);
 
                     stick.style.left = `${left}px`;
                     stick.style.top = `${top}px`;
                     background.appendChild(stick);
+                    sticks.push({ left, top });
                 }
             }
 
