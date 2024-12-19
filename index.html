@@ -1,125 +1,101 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Iskander's Bio</title>
     <style>
-        body {
+        * {
             margin: 0;
             padding: 0;
-            font-family: 'Arial', sans-serif;
-            background: #8DC373;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'San Francisco', sans-serif;
+            overflow: hidden;
+        }
+
+        .background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            backdrop-filter: blur(10px);
+            overflow: hidden;
+        }
+
+        .bio-container {
+            position: relative;
+            width: 80%;
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border: 2px solid rgba(255, 255, 255, 0.5);
+            border-radius: 10px;
+            backdrop-filter: blur(5px);
             color: white;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-        }
-
-        .container {
-            background-color: #7FB066;
-            border-radius: 15px;
-            padding: 0;
-            width: 90%;
-            max-width: 500px;
-            margin: 20px;
-            text-align: center;
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
-        }
-
-        .banner {
-            width: calc(100% - 40px);
-            height: auto;
-            border-radius: 15px;
-            margin: 20px;
+            text-align: left;
         }
 
         h1 {
-            font-size: 28px;
-            margin: 20px 0;
+            font-size: 2.5em;
+            margin-bottom: 20px;
         }
 
         p {
             margin: 10px 0;
-            font-size: 16px;
-            line-height: 1.5;
         }
 
-        a {
-            color: #56784A;
-            text-decoration: none;
-            font-weight: bold;
-            transition: color 0.3s ease;
+        /* Анимация для зелёных палочек */
+        .green-stick {
+            position: absolute;
+            width: 10px;
+            height: 100px;
+            background: green;
+            opacity: 0.7;
+            animation: float 5s infinite;
         }
 
-        a:hover {
-            color: #D1E8B5;
-        }
-
-        .bold {
-            font-weight: bold;
-            font-size: 18px;
-        }
-
-        @media (min-width: 768px) {
-            .container {
-                padding: 20px;
-            }
-
-            h1 {
-                font-size: 32px;
-            }
-
-            p {
-                font-size: 18px;
-            }
-
-            .bold {
-                font-size: 20px;
-            }
-        }
-
-        @media (min-width: 1200px) {
-            .container {
-                max-width: 700px;
-            }
-
-            h1 {
-                font-size: 36px;
-            }
-
-            p {
-                font-size: 20px;
-            }
-
-            .bold {
-                font-size: 22px;
-            }
+        @keyframes float {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0); }
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <img src="banner.png" alt="Banner" class="banner">
-        <h1>Iskander's Bio</h1>
-        <p><strong>Pseudonym:</strong> Kezuhiro (けずひろ), Aki (アキ)</p>
-        <p><strong>Age:</strong> 14 y.o. (April 24)</p>
-        <p><strong>Devices:</strong> Google Pixel 6,</p>
-        <p>Samsung R517 (dead battery),</p>
-        <p>Raspberry Pi 3B+</p>
-        <p><strong>Languages:</strong> Russian, English (A2)</p>
-        <p><strong>Hobby:</strong> Coding (maybe), Watching Anime</p>
-        <p><strong>Programming:</strong> Python, C++(Arduino)</p>
-        <p><strong>Using:</strong> 
-            <a href="https://github.com/coddrago/Heroku" target="_blank">Heroku</a>
-        </p>
-        <p><strong>Accounts:</strong> 
-            <a href="https://t.me/dummykezu" target="_blank">Main</a>, 
-            <a href="https://t.me/aki_user" target="_blank">Twink</a>,
-            <a href="https://github.com/kezuhiro-web" target="_blank">GitHub</a>
-        </p>
-        <p class="bold">Goodbye, traveler &lt;!&gt;</p>
+    <div class="background">
+        <div class="bio-container">
+            <h1>Iskander's Bio</h1>
+            <p><strong>Pseudonym:</strong> Kezuhiro (けずひろ), Aki (アキ)</p>
+            <p><strong>Age:</strong> 14 y.o. (April 24)</p>
+            <p><strong>Devices:</strong> Google Pixel 6, Samsung R517 (dead battery), Raspberry Pi 3B+</p>
+            <p><strong>Languages:</strong> Russian, English (A2)</p>
+            <p><strong>Hobby:</strong> Coding (maybe), Watching Anime</p>
+            <p><strong>Programming:</strong> Python, C++ (Arduino)</p>
+            <p><strong>Using:</strong> Heroku</p>
+            <p><strong>Accounts:</strong> Main, Twink, GitHub</p>
+            <p>Goodbye, traveler &lt;!&gt;</p>
+        </div>
     </div>
+    <script>
+        const background = document.querySelector('.background');
+
+        function createGreenSticks() {
+            for (let i = 0; i < 20; i++) {
+                const stick = document.createElement('div');
+                stick.classList.add('green-stick');
+                stick.style.left = Math.random() * 100 + 'vw';
+                stick.style.animationDuration = Math.random() * 3 + 2 + 's';
+                background.appendChild(stick);
+            }
+        }
+
+        createGreenSticks();
+    </script>
 </body>
 </html>
