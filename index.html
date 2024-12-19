@@ -29,10 +29,10 @@
 
         .bio-container {
             position: relative;
-            width: 50%;
+            width: 80%;
             max-width: 800px;
-            height: 70%;
-            margin: 5% auto;
+            height: auto;
+            margin: 25% auto;
             padding: 20px;
             background: rgba(255, 255, 255, 0.1);
             border: 2px solid rgba(255, 255, 255, 0.5);
@@ -40,6 +40,7 @@
             backdrop-filter: blur(5px);
             color: white;
             text-align: center;
+            z-index: 1;
         }
 
         h1 {
@@ -60,13 +61,12 @@
             color: darkgreen;
         }
 
-        /* Анимация для зелёных палочек */
         .green-stick {
             position: absolute;
             width: 10px;
             height: 100px;
-            background: green;
-            opacity: 0.7;
+            background: rgba(0, 255, 0, 0.7);
+            filter: blur(2px);
             animation: float 5s infinite;
         }
 
@@ -92,22 +92,31 @@
             <p><a href="https://t.me/dummykezu" target="_blank">Main</a>, <a href="https://t.me/aki_user" target="_blank">Twink</a>, <a href="https://github.com/kezuhiro-web" target="_blank">GitHub</a></p>
             <p>Goodbye, traveler &lt;!&gt;</p>
         </div>
-    </div>
-    <script>
-        const background = document.querySelector('.background');
+        <script>
+            const background = document.querySelector('.background');
 
-        function createGreenSticks() {
-            for (let i = 0; i < 20; i++) {
-                const stick = document.createElement('div');
-                stick.classList.add('green-stick');
-                stick.style.left = Math.random() * 100 + 'vw';
-                stick.style.top = Math.random() * 100 + 'vh';
-                stick.style.animationDuration = Math.random() * 3 + 2 + 's';
-                background.appendChild(stick);
+            function createGreenSticks() {
+                const screenWidth = window.innerWidth;
+                const screenHeight = window.innerHeight;
+
+                for (let i = 0; i < 20; i++) {
+                    const stick = document.createElement('div');
+                    stick.classList.add('green-stick');
+
+                    let left, top;
+                    do {
+                        left = Math.random() * (screenWidth - 80 * screenWidth / 100) + 10 * screenWidth / 100;
+                        top = Math.random() * (screenHeight - 50) + 25;
+                    } while (top < 25 || top > screenHeight - 25);
+
+                    stick.style.left = `${left}px`;
+                    stick.style.top = `${top}px`;
+                    background.appendChild(stick);
+                }
             }
-        }
 
-        createGreenSticks();
-    </script>
+            createGreenSticks();
+        </script>
+    </div>
 </body>
 </html>
