@@ -29,16 +29,17 @@
 
         .bio-container {
             position: relative;
-            width: 80%;
-            max-width: 600px;
-            margin: 50px auto;
+            width: 50%;
+            max-width: 800px;
+            height: 70%;
+            margin: 5% auto;
             padding: 20px;
             background: rgba(255, 255, 255, 0.1);
             border: 2px solid rgba(255, 255, 255, 0.5);
             border-radius: 10px;
             backdrop-filter: blur(5px);
             color: white;
-            text-align: left;
+            text-align: center;
         }
 
         h1 {
@@ -48,6 +49,15 @@
 
         p {
             margin: 10px 0;
+        }
+
+        a {
+            color: green;
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: darkgreen;
         }
 
         /* Анимация для зелёных палочек */
@@ -77,8 +87,9 @@
             <p><strong>Languages:</strong> Russian, English (A2)</p>
             <p><strong>Hobby:</strong> Coding (maybe), Watching Anime</p>
             <p><strong>Programming:</strong> Python, C++ (Arduino)</p>
-            <p><strong>Using:</strong> Heroku</p>
-            <p><strong>Accounts:</strong> Main, Twink, GitHub</p>
+            <p><strong>Using:</strong> <a href="https://github.com/coddrago/Heroku" target="_blank">Heroku</a></p>
+            <p><strong>Accounts:</strong></p>
+            <p><a href="https://t.me/dummykezu" target="_blank">Main</a>, <a href="https://t.me/aki_user" target="_blank">Twink</a>, <a href="https://github.com/kezuhiro-web" target="_blank">GitHub</a></p>
             <p>Goodbye, traveler &lt;!&gt;</p>
         </div>
     </div>
@@ -90,6 +101,7 @@
                 const stick = document.createElement('div');
                 stick.classList.add('green-stick');
                 stick.style.left = Math.random() * 100 + 'vw';
+                stick.style.top = Math.random() * 100 + 'vh';
                 stick.style.animationDuration = Math.random() * 3 + 2 + 's';
                 background.appendChild(stick);
             }
