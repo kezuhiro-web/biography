@@ -125,8 +125,8 @@
                     let left, top;
                     do {
                         left = Math.random() * (screenWidth - 80 * screenWidth / 100) + 10 * screenWidth / 100;
-                        top = Math.random() * (screenHeight - 50) + 25;
-                    } while (top < 25 || top > screenHeight - 25);
+                        top = Math.random() * (screenHeight - 100) + 50; // Увеличено расстояние от верхней и нижней границ
+                    } while (top < 50 || top > screenHeight - 50); // Убедитесь, что палочки не находятся слишком близко к краям
 
                     stick.style.left = `${left}px`;
                     stick.style.top = `${top}px`;
