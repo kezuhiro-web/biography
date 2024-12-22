@@ -13,24 +13,28 @@
             color: white;
             display: flex;
             justify-content: center;
-            align-items: center;
+            align-items: flex-start;
             min-height: 100vh;
             position: relative;
-            overflow: hidden;
+            overflow: auto;
             flex-direction: column;
+            padding-top: 25%;
+            padding-bottom: 25%;
         }
 
         .container {
             background-color: rgba(0, 0, 0, 0.7);
             border-radius: 15px;
             padding: 20px;
-            width: 60%
+            width: 60%;
             max-width: 500px;
             margin: 20px;
             text-align: center;
             box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
             backdrop-filter: blur(15px);
             border: 2px solid #333;
+            z-index: 10;
+            position: relative;
         }
 
         .banner {
