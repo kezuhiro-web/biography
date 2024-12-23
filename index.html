@@ -9,8 +9,8 @@
             margin: 0;
             padding: 0;
             font-family: 'Arial', sans-serif;
-            background: #f0f0f0;
-            color: black;
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -20,19 +20,19 @@
         }
 
         .container {
-            background-color: rgba(255, 255, 255, 0.9);
+            background-color: rgba(0, 0, 0, 0.3);
             border-radius: 15px;
             padding: 20px;
             width: 80%;
             max-width: 500px;
             margin: 20px;
             text-align: center;
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
             backdrop-filter: blur(15px);
-            border: 2px solid #ddd;
+            border: 2px solid #333;
             z-index: 10;
             position: relative;
-            animation: fadeInScale 0.6s ease-in-out;
+            animation: fadeInScale 1s ease-in-out;
         }
 
         .banner {
@@ -98,6 +98,17 @@
             animation-duration: 14s;
         }
 
+        @keyframes fadeInScale {
+            0% {
+                transform: scale(0);
+                opacity: 0;
+            }
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
         @keyframes float {
             0% {
                 transform: translateY(0) translateX(0);
@@ -110,42 +121,31 @@
             }
         }
 
-        @keyframes fadeInScale {
-            0% {
-                opacity: 0;
-                transform: scale(1.5);
-            }
-            100% {
-                opacity: 1;
-                transform: scale(1);
-            }
-        }
-
         .button-container {
             display: flex;
             justify-content: center;
             gap: 10px;
             margin-top: 10px;
-            background: rgba(255, 255, 255, 0.8);
+            background: rgba(0, 0, 0, 0.3);
             border-radius: 10px;
             padding: 10px;
-            animation: fadeInScale 0.6s ease-in-out 0.2s;
+            animation: fadeInScale 1s ease-in-out;
         }
 
         .button-container a {
             display: inline-block;
             padding: 10px 20px;
-            background-color: rgba(255, 255, 255, 0.8);
-            color: black;
+            background-color: rgba(0, 0, 0, 0.3);
+            color: white;
             text-decoration: none;
             font-weight: bold;
             border-radius: 10px;
             transition: background-color 0.3s ease;
-            border: 2px solid #ddd;
+            border: 2px solid #333;
         }
 
         .button-container a:hover {
-            background-color: rgba(255, 255, 255, 1);
+            background-color: rgba(0, 0, 0, 0.5);
         }
 
         .container a {
