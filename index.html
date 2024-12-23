@@ -16,7 +16,6 @@
             align-items: center;
             min-height: 100vh;
             flex-direction: column;
-            overflow-x: hidden;
             overflow-y: auto;
         }
 
@@ -33,7 +32,7 @@
             border: 2px solid #333;
             z-index: 10;
             position: relative;
-            animation: fadeInScale 1s ease-in-out;
+            animation: fadeInScale 0.6s ease-in-out;
         }
 
         .banner {
@@ -99,30 +98,6 @@
             animation-duration: 14s;
         }
 
-        .circle-5 {
-            width: 200px;
-            height: 200px;
-            top: 20%;
-            left: 70%;
-            animation-duration: 20s;
-        }
-
-        .circle-6 {
-            width: 60px;
-            height: 60px;
-            top: 80%;
-            left: 80%;
-            animation-duration: 16s;
-        }
-
-        .circle-7 {
-            width: 130px;
-            height: 130px;
-            top: 30%;
-            left: 50%;
-            animation-duration: 22s;
-        }
-
         @keyframes float {
             0% {
                 transform: translateY(0) translateX(0);
@@ -154,7 +129,7 @@
             background: rgba(0, 0, 0, 0.3);
             border-radius: 10px;
             padding: 10px;
-            animation: fadeInScale 1s ease-in-out 0.2s;
+            animation: fadeInScale 0.6s ease-in-out 0.2s;
         }
 
         .button-container a {
@@ -189,9 +164,6 @@
     <div class="circle circle-2"></div>
     <div class="circle circle-3"></div>
     <div class="circle circle-4"></div>
-    <div class="circle circle-5"></div>
-    <div class="circle circle-6"></div>
-    <div class="circle circle-7"></div>
 
     <div class="container">
         <img src="banner.gif" alt="Banner" class="banner">
