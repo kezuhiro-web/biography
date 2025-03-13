@@ -3,126 +3,84 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>iskander's bio</title>
+    <title>Iskander's Bio</title>
     <style>
-        html, body {
+        body {
+            font-family: "Lucida Console", monospace;
             margin: 0;
             padding: 0;
-            font-family: "Courier New", monospace;
-            background-image: url("bg.jpg");
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            color: white;
+            background-color: #1e1e1e;
             display: flex;
             flex-direction: column;
             align-items: center;
+            justify-content: center;
             min-height: 100vh;
-            overflow-y: auto;
+            color: #e0e0e0;
         }
 
         .container {
-            background-color: rgba(0, 0, 0, 0.2);
-            border-radius: 15px;
+            background-color: #2a2a2a;
+            border: 1px solid #444;
+            border-radius: 10px;
             padding: 20px;
             width: 80%;
-            max-width: 800px;
-            margin-top: 40px;
+            max-width: 550px;
             text-align: center;
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
-            backdrop-filter: blur(15px);
-            border: 2px solid #333;
-            animation: fadeInScale 1s ease-in-out;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
         }
 
         .banner {
-            width: calc(100% - 40px);
-            height: auto;
-            border-radius: 15px;
-            margin: 20px;
+            width: 100%;
+            border-radius: 10px;
+            margin-bottom: 20px;
         }
 
-        h1 {
-            font-size: 28px;
+        .title {
+            font-size: 24px;
+            font-weight: bold;
+            color: #f0f0f0;
+            margin-bottom: 10px;
+        }
+
+        .separator {
+            border-top: 1px solid #444;
             margin: 20px 0;
         }
 
-        p {
-            margin: 10px 0;
-            font-size: 20px;
+        .info p {
+            font-size: 16px;
             line-height: 1.5;
+            margin: 10px 0;
+            color: #d0d0d0;
         }
 
-        .bold {
-            font-weight: bold;
-            font-size: 24px;
-        }
-
-        @keyframes fadeInScale {
-            0% {
-                transform: scale(0);
-                opacity: 0;
-            }
-            100% {
-                transform: scale(1);
-                opacity: 1;
-            }
-        }
-
-        @keyframes float {
-            0% {
-                transform: translateY(0) translateX(0);
-            }
-            50% {
-                transform: translateY(-100px) translateX(100px);
-            }
-            100% {
-                transform: translateY(0) translateX(0);
-            }
-        }
-
-        .button-container {
+        .buttons {
             display: flex;
             flex-direction: column;
             align-items: center;
-            gap: 15px;
-            width: 90%;
-            max-width: 800px;
+            gap: 10px;
             margin-top: 20px;
-            margin-bottom: 40px;
+            width: 80%;
+            max-width: 550px;
         }
 
-        .button-container a {
-            display: inline-block;
-            width: 90%;
-            max-width: 800px;
-            height: 50px;
-            background-color: rgba(0, 0, 0, 0.2);
-            color: white;
+        .button {
+            background-color: #2a2a2a;
+            border: 1px solid #444;
+            color: #e0e0e0;
+            padding: 15px 0;
+            text-decoration: none;
+            font-size: 16px;
+            border-radius: 5px;
             text-align: center;
-            line-height: 50px;
-            text-decoration: none;
-            font-weight: bold;
-            border-radius: 15px;
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
-            border: 2px solid #333;
-            backdrop-filter: blur(15px);
-            transition: background-color 0.3s ease;
-            animation: fadeInScale 1s ease-in-out;
+            width: 100%;
+            transition: background-color 0.3s, color 0.3s;
+            display: inline-block;
         }
 
-        .button-container a:hover {
-            background-color: rgba(0, 0, 0, 0.5);
-        }
-
-        .container a {
-            color: rgba(117, 212, 218, 0.8);
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        .container a:hover {
-            color: rgb(127, 226, 233, 1);
+        .button:hover {
+            background-color: #3a3a3a;
+            color: #fff;
         }
     </style>
 </head>
@@ -130,24 +88,27 @@
 
     <div class="container">
         <img src="banner.jpg" alt="Banner" class="banner">
-        <h1>iskander's bio</h1>
-        <p><strong>pseudonyms:</strong> aki, kezuhiro</p>
-        <p><strong>age:</strong> 14 y.o. (april 24)</p>
-        <p><strong>devices:</strong> google pixel 6, asus zenfone 2 laser, acer aspire a15-41m, raspberry pi 3b+</p>
-        <p><strong>phone rom:</strong> pixel stock (a14)</p>
-        <p><strong>from:</strong> russia</p>
-        <p><strong>hobby:</strong> coding, watching anime</p>
-        <p><strong>programming langs:</strong> python</p>
-        <p class="bold">goodbye :D</p>
+        <div class="title">Iskander's Bio</div>
+        <div class="separator"></div>
+        <div class="info">
+            <p><strong>Pseudonyms:</strong> Aki, Kezuhiro</p>
+            <p><strong>Age:</strong> 14 y.o. (April 24)</p>
+            <p><strong>Devices:</strong> Google Pixel 6, ASUS Zenfone 2 Laser, Acer Aspire A15-41M, Raspberry Pi 3B+</p>
+            <p><strong>Phone ROM:</strong> Pixel Stock (A14)</p>
+            <p><strong>From:</strong> Russia</p>
+            <p><strong>Hobby:</strong> Coding, watching anime</p>
+            <p><strong>Programming Langs:</strong> Python</p>
+        </div>
     </div>
 
-    <div class="button-container">
-        <a href="https://t.me/heatedpixel" target="_blank">telegram</a>
-        <a href="https://t.me/aki_donate" target="_blank">donate</a>
-        <a href="https://t.me/kezuhiroweb" target="_blank">twink</a>
-        <a href="https://t.me/aki_modules" target="_blank">hikka modules</a>
-        <a href="https://github.com/kezuhiro-web" target="_blank">github</a>
-        <a href="https://t.me/aki_aeza_bot?start=AuroraFeedBack" target="_blank">feedback</a>
+    <div class="buttons">
+        <a href="https://t.me/heatedpixel" target="_blank" class="button">Telegram</a>
+        <a href="https://t.me/aki_donate" target="_blank" class="button">Donate</a>
+        <a href="https://t.me/kezuhiroweb" target="_blank" class="button">Twink</a>
+        <a href="https://t.me/aki_modules" target="_blank" class="button">Hikka Modules</a>
+        <a href="https://github.com/kezuhiro-web" target="_blank" class="button">GitHub</a>
+        <a href="https://t.me/aki_aeza_bot?start=AuroraFeedBack" target="_blank" class="button">Feedback</a>
     </div>
+
 </body>
 </html>
